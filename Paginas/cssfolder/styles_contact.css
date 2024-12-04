@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #030303;
+    color: #f1eded;
 }
 
 /* Sección de contacto */
 #contacto {
-    background-color: #ffffff;
+    background-color: #201e35;
     padding: 50px 20px;
     text-align: center;
 }
@@ -19,20 +19,20 @@ body {
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    background-color: #ffffff;
+    background-color: rgb(11, 11, 11);
     border-radius: 8px;
 }
 
 #contacto h2 {
     font-size: 2rem;
-    color: #0078D7;
+    color: #f9f9f9;
     margin-bottom: 10px;
 }
 
 #contacto p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #666;
+    color: #a09b9b;
 }
 
 /* Estilos del formulario */
@@ -45,7 +45,7 @@ form {
 form label {
     font-weight: bold;
     text-align: left;
-    color: #333;
+    color: #f9f9f9;
 }
 
 form input, form textarea {
