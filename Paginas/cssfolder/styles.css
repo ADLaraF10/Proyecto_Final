@@ -1,10 +1,59 @@
 body{
+    margin: 0;
+}
+
+.body_container{
     background-color: black;
     color: white;
     font-family: helvetica;
     text-align: center;
+    margin: 0px;
+    padding: 40px;
+    margin-bottom: 0;
+}
+
+.DescripcionTech-container{
+    line-height: 2;
 }
 
 header{
+    text-align: center;
+}
+
+.lista_valores{
+    text-align: justify;
+}
+
+.header_container{
+    border-radius: 10px;
+    background-color: #001e3c;
+    padding: 1px;
+}
+
+.gallery{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+}
+
+.gallery > div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition:all .8s cubic-bezier(.25, .4, .45, 1.4)
+}
+
+.gallery > div:hover{
+    flex: 5;
+}
+
+footer{
+    background-color: #001e3c;
+    padding: 50px;
+    margin: 0px;
+    font-family: helvetica;
+    color: white;
     text-align: center;
 }
