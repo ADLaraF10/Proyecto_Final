@@ -26,7 +26,7 @@ const divisa = "$"
 function render(){
     baseDeDatos.forEach((dato) => {
         const miNodo = document.createElement('div');
-        miNodo.classList.add('card', 'col-sm-4','bg-black', 'm-2', 'p-1');
+        miNodo.classList.add('card', 'col-sm-4','bg-black', 'm-2', 'p-1', 'justify-content-center');
         const miNodoCardBody = document.createElement('div');
         miNodoCardBody.classList.add('card-body','bg-dark', 'p-0');
         const miNodoTitle = document.createElement('h6');
