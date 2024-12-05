@@ -17,8 +17,13 @@
       crossorigin="anonymous">
     </script>
   </head>
+  <style>
+    .hover-bg-a:hover  {
+      background-color: var(--bs-black);
+    }
+  </style>
   <body class="bg-dark">
-    <!--Barra de navegacion y Busqueda-->
+    <!--------------------- Barra de navegacion y Busqueda ------------------------>
     <section>
       <nav class="navbar bg-black">
         <div class="container-fluid d-flex align-items-center">
@@ -26,7 +31,7 @@
           <a class="navbar-brand me-3" href="#">
             <img src="recursos/img/LogoBlanco.png" alt="Bootstrap" width="80" />
           </a>
-          <!-- Formulario de búsqueda -->
+          <!--------------------- Formulario de búsqueda ------------------------>
           <form class="d-flex flex-grow-1 mx-3" role="search">
             <input
               class="form-control me-2"
@@ -38,7 +43,7 @@
               Search
             </button>
           </form>
-          <!-- Opciones -->
+          <!------------------------ Opciones -------------------------->
            <div>
             <a href="carritoDeCompra.html" class="mx-1">
               <img src="recursos/img/Carrito.png" alt="top" width="27">
@@ -51,6 +56,7 @@
       </nav>
       <nav class="bg-black">
         <div class="d-flex justify-content-center">
+          <!-----------------------------------Menu Desplegable -------------------------------->
           <div class="btn-group mx-4">
             <button
               type="button"
@@ -60,14 +66,14 @@
             >
               PC
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Tarjeta Madre</a></li>
-              <li><a class="dropdown-item" href="#">Ram</a></li>
-              <li><a class="dropdown-item" href="#">Procesador</a></li>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Tarjeta Madre</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Ram</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Procesador</a></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Personalización</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Personalización</a></li>
             </ul>
           </div class = "d-flex align-items-center">
           <div class="btn-group mx-4">
@@ -79,14 +85,14 @@
             >
               Laptop
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Pasta térmica</a></li>
-              <li><a class="dropdown-item" href="#">Periféricos</a></li>
-              <li><a class="dropdown-item" href="#">Componentes externos</a></li>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Pasta térmica</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Periféricos</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Componentes externos</a></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Todos...</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Todos...</a></li>
             </ul>
           </div>
           <div class="btn-group mx-4">
@@ -98,20 +104,20 @@
             >
               Phone
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Tarjetas SD</a></li>
-              <li><a class="dropdown-item" href="#">Pantalla LCD</a></li>
-              <li><a class="dropdown-item" href="#">Lector de huellas</a></li>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Tarjetas SD</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Pantalla LCD</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Lector de huellas</a></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Todos...</a></li>
+              <li><a class="dropdown-item text-primary hover-bg-a" href="#">Todos...</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </section>
-    <!--Carrucel de imagenes-->
+    <!---------------------Carrucel de imagenes------------------------->
     <section class="container-fluid d-flex align-items-center bg-black">
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -140,8 +146,29 @@
         </button>
       </div>
     </section>
+    <!------------------------------------------ Productos ------------------------------------->
+    <section>
+      <main id="items" class="col-sm-8 row"></main>
+    </section>
+    <div class="row">
+      <div class="col-md-6 pb-4">
+          <div class="d-flex">
+            <select id="filtro" class="form-control">
+              <option value="todas">Todas</option>
+              <option value="sombreros">Sombreros</option>
+              <option value="mochilas">Mochilas</option>
+              <option value="bolsos">Bolsos</option>
+              <option value="hamacas">Hamacas</option>
+              <option value="plateria">Platería</option>
+              <option value="tapetes">Tapetes</option>
+          </select>
+          </div>
+      </div>
+  </div>
+  <main id="items" class="col-sm-8 row"></main>
+    <!---------------------------------------- Footer ---------------------------------------->
     <footer class="bg-black d-flex px-4 justify-content-center" >
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column mx-5">
         <p class="text-light text-opacity-50">Empresa</p>
         <a href="contatcto.html" class="link-secondary 
         link-offset-2 
@@ -205,5 +232,6 @@
         </a>
       </div>
     </footer>
+    <script src="recursos/js/index2.js"></script>
   </body>
 </html>
