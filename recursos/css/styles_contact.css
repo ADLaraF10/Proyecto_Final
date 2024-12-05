@@ -14,8 +14,11 @@ body {
     text-align: center;
 }
 
-#contacto .container {
-    max-width: 600px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60%;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -37,6 +40,8 @@ body {
 
 /* Estilos del formulario */
 form {
+    width: 90%;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -61,7 +66,8 @@ form input:focus, form textarea:focus {
     border-color: #0078D7;
 }
 
-form button {
+button {
+    margin-top: 20px;
     background-color: #0078D7;
     color: white;
     border: none;
@@ -69,6 +75,7 @@ form button {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    width: 80%;
     transition: background-color 0.3s;
 }
 
