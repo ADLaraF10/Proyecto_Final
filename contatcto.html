@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Techere</title>
-    <link rel="stylesheet" href="recursos/css/styles_contact.css">
+    <link rel="stylesheet" href="cssfolder/styles_contact.css">
 </head>
 <body>
     <section id="contacto">
@@ -23,8 +23,33 @@
 
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+                <section class="swtcher-cont">
+                    <div class="switcher-card">
+                        <h1>Soy mayor de edad</h1>
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label> 
+                        </div>
+                        <div>                         
+                            <span class="colapso_mental">
+                                ¿Eres mayor de edad?
+                                Esta opción es completamente opcional y 
+                                está destinada únicamente a fines informativos. 
+                                Marcar esta casilla no afectará tu acceso a los servicios,
+                                y tu respuesta será tratada de manera confidencial.
+                                Si tienes 18 años o más, puedes marcar la casilla para confirmar. 
+                                Esta información nos ayuda a entender mejor a nuestros 
+                                usuarios y mejorar la experiencia general de uso.
+                            </span>
+                        </div>  
+                    </div> 
+                </section>
+
+                <button type="submit">Enviar</button>
             </form>
-            <button type="submit">Enviar</button>
         </div>
     </section>
 </body>
