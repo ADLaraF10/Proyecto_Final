@@ -23,7 +23,7 @@ const baseDeDatos = [
 const DOMitems = document.querySelector('#items');
 const divisa = "$"
 
-function render1(){
+function render(){
     baseDeDatos.forEach((dato) => {
         const miNodo = document.createElement('div');
         miNodo.classList.add('card', 'col-sm-4','bg-black', 'm-2', 'p-1');
@@ -39,7 +39,7 @@ function render1(){
         miNodoDescripcion.classList.add('card-text', 'text-secondary', 'mx-2');
         miNodoDescripcion.textContent = dato.descripcion;
         const miNodoFooter = document.createElement('div')
-        miNodoFooter.classList.add('d-flex')
+        miNodoFooter.classList.add('d-flex','justify-content-between', 'align-items-center')
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text', 'text-secondary', 'mx-2');
         miNodoPrecio.textContent = `${dato.precio}${divisa}`;
@@ -58,35 +58,6 @@ function render1(){
     })
 }
 
-function render(){
-    baseDeDatos.forEach((info) => {
-        const miNodo = document.createElement('div');
-        miNodo.classList.add('card', 'col-sm-4', 'h-2');
-        const miNodoCardBody = document.createElement('div');
-        miNodoCardBody.classList.add('card-body');
-        const miNodoTitle = document.createElement('h6');
-        miNodoTitle.classList.add('card-title');
-        miNodoTitle.textContent = info.nombre;
-        const miNodoImagen = document.createElement('img');
-        miNodoImagen.classList.add('img-fluid');
-        miNodoImagen.setAttribute('src', info.imagen);
-        const miNodoPrecio = document.createElement('p');
-        miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = `${info.precio}${divisa}`;
-        const miNodoBoton = document.createElement('button');
-        miNodoBoton.classList.add();
-        miNodoBoton.textContent = 'Agregar';
-        miNodoBoton.setAttribute('marcador', info.id);
-        miNodoBoton.addEventListener('click', anadirProductoAlCarrito);
-        miNodo.appendChild(miNodoImagen);
-        miNodoCardBody.appendChild(miNodoTitle);
-        miNodoCardBody.appendChild(miNodoPrecio);
-        miNodoCardBody.appendChild(miNodoBoton);
-        miNodo.appendChild(miNodoCardBody);
-        DOMitems.appendChild(miNodo);
-    });
-}
-
-render1()
+render()
 
 });
