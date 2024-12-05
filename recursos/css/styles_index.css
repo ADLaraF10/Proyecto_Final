@@ -1,0 +1,6 @@
+.columna_foter {
+    display: flex;
+    flex-direction: column;
+    
+    margin-inline: 40px;
+}
