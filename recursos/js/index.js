@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     const DOMitems = document.querySelector('#items');
     const divisa = "$"
+
     let carrito = []
 
 
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function agregarAlCarrito(evento) {
         carrito.push(evento.target.getAttribute('marcador'));
         agregarAlStorage();
-        handleCarritoValue(carrito.length)
+        handleCarritoValue(JSON.parse(localStorage.getItem('carrito')).length)
     }
 
     function agregarAlStorage(){
@@ -82,5 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     AlmacenarDatos()
     render()
+    if(JSON.parse(localStorage.getItem('carrito')) != null){
+        if(JSON.parse(localStorage.getItem('carrito')).length != 0){
+            handleCarritoValue(JSON.parse(localStorage.getItem('carrito')).length)
+        }
+    }
 
 });
