@@ -40,12 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
+        localStorage.setItem('carrito', JSON.stringify(carrito));
         console.log(carrito);
         render();
     }
 
     function vaciarCarrito(){
         carrito = []
+        localStorage.clear()
         render();
     }
 
