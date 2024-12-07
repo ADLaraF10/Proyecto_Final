@@ -120,6 +120,6 @@ main.contenido {
 .elemento{
     margin: 20px;
     padding: 20px;
-    background-color: aliceblue;
-    
+    background-color: rgb(102, 75, 220);
+    color: white;
 }
