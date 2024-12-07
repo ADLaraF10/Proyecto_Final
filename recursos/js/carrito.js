@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const divisa = "$"
+    const DOMtotal = document.querySelector('#total');
+    const DOMbotonVaciar = document.querySelector('#vaciar-carrito')
     const DOMcarrito = document.querySelector('#carrito');
-    const carrito = JSON.parse(localStorage.getItem('carrito'));
+    let carrito = JSON.parse(localStorage.getItem('carrito'));
     const baseDeDatos = JSON.parse(localStorage.getItem('baseDeDatos'))
     console.log(carrito)
 
@@ -29,18 +31,35 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
         })
+        DOMtotal.textContent = calcularTotal();
     }
 
     function borrarItemCarrito(evento) {
+        console.log('aqui');
         const id = evento.target.dataset.item;
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
-        renderizarCarrito();
-        guardarCarritoEnLocalStorage();
-        handleCarritoValue(carrito.length);
+        console.log(carrito);
+        render();
+    }
+
+    function vaciarCarrito(){
+        carrito = []
+        render();
+    }
+
+    function calcularTotal() {
+        return carrito.reduce((total, item) => {
+            const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                return itemBaseDatos.id === parseInt(item);
+            });
+            return total + miItem[0].precio;
+        }, 0).toFixed(2);
     }
 
     render()
+
+    DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 })
 
