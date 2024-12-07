@@ -1,0 +1,125 @@
+/* General */
+gran_body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+body{
+    background-color: #000000;
+    font-family: calibri;
+}
+
+/* Header */
+header {
+    background-color: #7e99b4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(141, 100, 100, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+/* Main content */
+main.contenido {
+    display: flex;
+    margin: 80px auto; /* Espacio debajo del header */
+    padding: 20px;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Producto */
+.producto {
+    background-color: rgb(178, 205, 248);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.producto .imagenes img {
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.colores {
+    margin-top: 20px;
+}
+
+/* Descripción */
+.descripcion {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.descripcion h2 {
+    margin-top: 0;
+}
+
+.descripcion ul {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+
+.agregar{
+    padding: 10px;
+    background-color: #2833a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.agregar:hover{
+    background-color: #4f59c0;
+}
+
+.slc{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.imgref{
+    width: 300px;
+    height: 300px;
+}
+
+.elemento{
+    margin: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+    
+}
