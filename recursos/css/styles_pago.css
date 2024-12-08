@@ -126,4 +126,24 @@ color: #d17842;
 border: 2px solid #d17842;
 background: transparent;
 }
+
+.metodosdepago{
+    align-content: flex-end;
+}
+
+.gpayimg{
+    width: 100px;
+}
+
+.appy{
+    width: 60px;
+}
+
+.footerclass{
+    background-color: #025180;
+    color: white;
+    font-family: monospace;
+    padding: 30px;
+    text-align: center;
+}
   
