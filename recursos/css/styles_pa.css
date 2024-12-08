@@ -41,7 +41,7 @@ header h1 {
     color: white;
 }
 
-/* Main content */
+/* Contenido del main */
 main.contenido {
     display: flex;
     margin: 80px auto; /* Espacio debajo del header */
@@ -50,7 +50,7 @@ main.contenido {
     gap: 20px;
 }
 
-/* Producto */
+/* Container del Producto */
 .producto {
     background-color: rgb(178, 205, 248);
     padding: 20px;
@@ -65,11 +65,12 @@ main.contenido {
     transition: all 0.3s ease-in-out;
 }
 
+
+/* Tarjeta que contiene al selector*/
 .colores {
     margin-top: 20px;
 }
 
-/* Descripción */
 .descripcion {
     flex: 2;
     background-color: white;
@@ -88,6 +89,8 @@ main.contenido {
     padding: 0;
 }
 
+
+/* Botones */
 .agregar{
     padding: 10px;
     background-color: #2833a7;
@@ -101,6 +104,8 @@ main.contenido {
     background-color: #4f59c0;
 }
 
+
+/* Selector */
 .slc{
     border-radius: 10px;
     padding: 5px;
@@ -112,11 +117,15 @@ main.contenido {
     overflow: scroll;
 }
 
+
+/* Clase de las imagenes del carrusel inferior */
 .imgref{
     width: 300px;
     height: 300px;
 }
 
+
+/* Clase del contenedor de cada imgref */
 .elemento{
     margin: 20px;
     padding: 20px;
