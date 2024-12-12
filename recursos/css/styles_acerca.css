@@ -52,10 +52,15 @@ header{
 }
 
 footer{
+    border-top: 2px solid rgb(139, 139, 139);
     background-color: #001e3c;
     padding: 50px;
     margin: 0px;
     font-family: helvetica;
     color: white;
     text-align: center;
+}
+
+.header{
+    border-bottom:2px solid rgb(139, 139, 139) ;
 }

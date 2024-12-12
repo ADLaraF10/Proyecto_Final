@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const divisa = "$"
 
     let carrito = []
+    let producto = 0;
 
 
     function render() {
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodoBoton.classList.add('btn', 'btn-primary', 'm-2');
             miNodoBoton.textContent = 'Comprar';
             miNodoBoton.setAttribute('marcador', dato.id);
-            //miNodoBoton.addEventListener('click', agregarAlCarrito);
+            miNodoBoton.addEventListener('click', guardarId);
             miNodoCardBody.appendChild(miNodoImagen)
             miNodoCardBody.appendChild(miNodoTitle)
             NodoBoton.appendChild(miNodoBoton)
@@ -66,14 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    function agregarAlCarrito(evento) {
-        carrito.push(evento.target.getAttribute('marcador'));
+    function guardarId(evento) {
+        producto = evento.target.getAttribute('marcador');
         agregarAlStorage();
         handleCarritoValue(JSON.parse(localStorage.getItem('carrito')).length)
     }
 
     function agregarAlStorage(){
-        localStorage.setItem('carrito', JSON.stringify(carrito));
+        localStorage.setItem('producto', JSON.stringify(producto));
     }
 
     function AlmacenarDatos(){
@@ -84,13 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const carritoContainer = document.getElementById("carrito-value");
         carritoContainer.textContent = `${value}`;
     }
-
+    
     AlmacenarDatos()
     render()
+
+    
     if(JSON.parse(localStorage.getItem('carrito')) != null){
         if(JSON.parse(localStorage.getItem('carrito')).length != 0){
             handleCarritoValue(JSON.parse(localStorage.getItem('carrito')).length)
         }
     }
-
 });
