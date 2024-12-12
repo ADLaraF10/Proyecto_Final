@@ -46,16 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const miNodoPrecio = document.createElement('p');
             miNodoPrecio.classList.add('card-text', 'text-secondary', 'mx-2');
             miNodoPrecio.textContent = `${dato.precio}${divisa}`;
+            const NodoBoton = document.createElement('a')
+            NodoBoton.classList.add('btn')
+            NodoBoton.href = 'producto.html'
             const miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn', 'btn-primary', 'm-2');
-            miNodoBoton.textContent = 'Agregar';
+            miNodoBoton.textContent = 'Comprar';
             miNodoBoton.setAttribute('marcador', dato.id);
-            miNodoBoton.addEventListener('click', agregarAlCarrito);
+            //miNodoBoton.addEventListener('click', agregarAlCarrito);
             miNodoCardBody.appendChild(miNodoImagen)
             miNodoCardBody.appendChild(miNodoTitle)
+            NodoBoton.appendChild(miNodoBoton)
             miNodoCardBody.appendChild(miNodoDescripcion)
             miNodoFooter.appendChild(miNodoPrecio)
-            miNodoFooter.appendChild(miNodoBoton)
+            miNodoFooter.appendChild(NodoBoton)
             miNodoCardBody.appendChild(miNodoFooter)
             miNodo.appendChild(miNodoCardBody);
             DOMitems.appendChild(miNodo)
